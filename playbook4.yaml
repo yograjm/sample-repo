@@ -1,0 +1,20 @@
+---
+- name: Install ML dependencies
+  hosts: webservers
+  remote_user: root
+  tasks:
+    - name: Install Python3    # check for python installation
+      apt:
+        name: python3
+        state: present
+    - name: Install pip3       # check for pip installation
+      apt:
+        name: python3-pip
+        state: present
+    - name: Install ML libraries (numpy, pandas, scikit-learn)
+      pip:
+        name:
+          - numpy
+          - pandas
+          - scikit-learn
+        state: present

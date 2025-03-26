@@ -1,0 +1,17 @@
+---
+- name: My first play
+  hosts: virtualmachines
+  remote_user: root
+  tasks:
+    - name: Ping my hosts
+      ansible.builtin.ping:
+
+- name: Update web servers
+  hosts: webservers
+  remote_user: root
+
+  tasks:
+  - name: Ensure apache is at the latest version
+    apt:
+      name: apache2
+      state: latest

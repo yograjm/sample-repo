@@ -1,0 +1,8 @@
+---
+- name: Update web servers
+  hosts: webservers
+  remote_user: root
+
+  tasks:
+  - name: Create 2 test directories
+    ansible.builtin.script: script.sh

@@ -1,0 +1,2 @@
+mkdir test_directory1
+mkdir test_directory2

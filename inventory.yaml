@@ -1,0 +1,13 @@
+virtualmachines: 
+  hosts: 
+     node01: 
+        ansible_host: 172.232.118.182
+        ansible_user: root
+#     node02: 
+#        ansible_host: Similarly you can add more managed nodes
+
+webservers: 
+  hosts: 
+     server01: 
+        ansible_host: 172.232.118.182
+        ansible_user: root
